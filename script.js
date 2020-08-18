@@ -7,6 +7,8 @@ const songSuggest = 'https://api.lyrics.ovh/suggest/'
 /*------search button------*/
 const searchButton = document.getElementById("searchButton");
 searchButton.addEventListener("click",function(){
+    document.getElementById("showItems").innerHTML = "";
+    document.getElementById("showLyrics").innerHTML = "";
     const songName = document.getElementById("songTitle").value;
     
     fetch(`${songSuggest}${songName}`)
